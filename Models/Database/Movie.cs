@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using MovieProDemo.Enums;
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -11,6 +12,7 @@ namespace MovieProDemo.Models.Database
     {
         public int Id { get; set; }
         public int MovieId { get; set; }
+
         public string Title { get; set; }
         public string TagLine { get; set; }
         public string Overview { get; set; }
@@ -37,5 +39,10 @@ namespace MovieProDemo.Models.Database
         [NotMapped]
         [Display(Name = "Backdrop Image")]
         public IFormFile BackdropFile { get; set; }
+
+        public ICollection<MovieCollection> Collections { get; set; } = new HashSet<MovieCollection>();
+        public ICollection<MovieCast> Cast { get; set; } = new HashSet<MovieCast>();
+        public ICollection<MovieCrew> Crew { get; set; } = new HashSet<MovieCrew>();
+
     }
 }
