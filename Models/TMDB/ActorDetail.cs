@@ -18,5 +18,5 @@
         public float popularity { get; set; }
         public string profile_path { get; set; }
     }
-
+    
 }
