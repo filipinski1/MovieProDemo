@@ -4,7 +4,7 @@
     {
         public string BaseUrl{ get; set; }
         public string BaseImagePath { get;set ; }
-        public string BasrYouTubePath { get; set; }
+        public string BaseYouTubePath { get; set; }
         public QueryOptions QueryOptions { get; set; }
     } 
     public class QueryOptions
