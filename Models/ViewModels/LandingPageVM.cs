@@ -1,7 +1,10 @@
-﻿using Microsoft.VisualBasic;
-using MovieProDemo.Models.TMDB;
+﻿using MovieProDemo.Models.TMDB;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
+using MovieProDemo.Models.Database;
+using System;
+using System.Threading.Tasks;
+using System.Linq;
+
 
 namespace MovieProDemo.Models.ViewModels
 {
